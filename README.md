@@ -34,4 +34,5 @@ BenchmarkUntil/after          	22826443	        52.03 ns/op
 ```
 
 SYSCALL spend 2284ns+ while cached value only spend 36ns. (63x faster)
+
 The high frequency reading SYSCALL can be optimized by the cache function.
