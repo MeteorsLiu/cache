@@ -26,11 +26,6 @@ BenchmarkTcpInfo/cached
 BenchmarkTcpInfo/cached       	32753490	        36.19 ns/op
 BenchmarkTcpInfo/raw
 BenchmarkTcpInfo/raw          	  583994	      2284 ns/op
-BenchmarkUntil
-BenchmarkUntil/until
-BenchmarkUntil/until          	36392731	        32.43 ns/op
-BenchmarkUntil/after
-BenchmarkUntil/after          	22826443	        52.03 ns/op
 ```
 
 SYSCALL spend 2284ns+ while cached value only spend 36ns. (63x faster)
