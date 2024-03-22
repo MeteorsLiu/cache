@@ -14,7 +14,12 @@ func getValue() (int, err) {
 // cache the return value of getValue(), valid until 5s.
 memo := cache.NewCache(getValue, 5*time.Second)
 // use this value
-fn(memo * 2)
+value, err := memo.Get()
+if err != nil {
+    // error handle
+    .... 
+}
+fn(value * 2)
 ```
 
 # Benchmark
