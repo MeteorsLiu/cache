@@ -21,11 +21,6 @@ fn(memo * 2)
 GetTCPInfo SYSCALL
 
 ```
-BenchmarkCache
-BenchmarkCache/cached
-BenchmarkCache/cached         	32197653	        36.19 ns/op
-BenchmarkCache/raw
-BenchmarkCache/raw            	  834799	      1433 ns/op
 BenchmarkTcpInfo
 BenchmarkTcpInfo/cached
 BenchmarkTcpInfo/cached       	32753490	        36.19 ns/op
@@ -38,5 +33,5 @@ BenchmarkUntil/after
 BenchmarkUntil/after          	22826443	        52.03 ns/op
 ```
 
-SYSCALL spend 1400ns+ while cached value only spend 36ns.
+SYSCALL spend 2284ns+ while cached value only spend 36ns. (63x faster)
 The high frequency reading SYSCALL can be optimized by the cache function.
